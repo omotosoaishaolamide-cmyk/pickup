@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import { Plus, X, MapPin, Clock, Send, Users, ChevronLeft } from "lucide-react";
 import { supabase } from "./supabaseClient";
+import { Analytics } from "@vercel/analytics/react";
 
 // ---- design tokens ----
 const C = {
@@ -222,6 +223,8 @@ export default function App() {
           {error}
         </div>
       )}
+
+      <Analytics />
     </div>
   );
 }
